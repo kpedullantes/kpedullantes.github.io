@@ -33,12 +33,80 @@ a {
   text-decoration: none;
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag {
+  width: 26px;
+  height: 18px;
+  display: inline-flex;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(244, 242, 237, 0.25);
+}
+
+.flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 56px 24px 80px;
   display: grid;
   gap: 28px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  animation: none !important;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero {
@@ -61,7 +129,7 @@ a {
 }
 
 .name {
-  font-size: 1rem;
+  font-size: 1.45rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent-2);
@@ -69,7 +137,7 @@ a {
 
 h1 {
   font-family: "Fraunces", "Times New Roman", serif;
-  font-size: clamp(2.3rem, 3.4vw, 3.8rem);
+  font-size: clamp(2rem, 3vw, 3.2rem);
   margin: 0;
   line-height: 1.1;
 }
@@ -79,7 +147,7 @@ h1 {
 }
 
 .lead {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--ink-muted);
   max-width: 62ch;
@@ -109,6 +177,120 @@ h1 {
   border-color: var(--border);
   background: transparent;
   color: var(--ink);
+}
+
+.contact {
+  display: grid;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: rgba(8, 9, 12, 0.55);
+  box-shadow: var(--shadow);
+  animation: fadeUp 700ms ease-out both;
+}
+
+.contact-header h2 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.contact-header p {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 7, 10, 0.7);
+}
+
+.modal-dialog {
+  position: relative;
+  width: min(520px, 92vw);
+  border-radius: 20px;
+  background: #0f1118;
+  border: 1px solid var(--border);
+  padding: 20px;
+  z-index: 1;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.modal-close {
+  border: 0;
+  background: transparent;
+  color: var(--ink-muted);
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-form {
+  display: grid;
+  gap: 14px;
+}
+
+.modal-field {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.modal-field input,
+.modal-field textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(244, 242, 237, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px 12px;
+  color: var(--ink);
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+.modal-field input:focus,
+.modal-field textarea:focus {
+  outline: 2px solid rgba(243, 192, 107, 0.4);
+  border-color: rgba(243, 192, 107, 0.6);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .btn:hover {
@@ -448,6 +630,13 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .site-header {
+    padding: 18px 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
   .hero {
     padding: 28px;
     grid-template-columns: 1fr;
@@ -463,5 +652,13 @@ footer {
     width: 140px;
     height: 140px;
     justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

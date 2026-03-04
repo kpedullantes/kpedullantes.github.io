@@ -4,14 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>K.P Edullantes | Full-Stack Developer</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <header class="site-header">
+      <div class="brand">
+        Kirk Patrick A. Edullantes
+        <span class="flag" aria-hidden="true">
+          <svg viewBox="0 0 36 24" role="img" aria-label="Philippines flag">
+            <rect width="36" height="24" fill="#0038A8" />
+            <rect width="36" height="12" y="12" fill="#CE1126" />
+            <polygon points="0,0 14,12 0,24" fill="#FFFFFF" />
+            <circle cx="5.4" cy="12" r="2.2" fill="#FCD116" />
+            <circle cx="4.2" cy="6.2" r="0.8" fill="#FCD116" />
+            <circle cx="4.2" cy="17.8" r="0.8" fill="#FCD116" />
+            <circle cx="9.1" cy="12" r="0.8" fill="#FCD116" />
+          </svg>
+        </span>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
     <main class="page">
       <section class="hero">
         <div class="hero-content">
-          <div class="name">Kirk Patrick A. Edullantes</div>
-          <span class="eyebrow">GitHub.io Profile</span>
           <h1>
             Full-Stack Engineer building
             <span class="accent">scalable, high-performance</span> applications.
@@ -21,71 +39,12 @@
             fast frontends to resilient backend architecture. I care about shipping
             experiences that are elegant, reliable, and aligned to business goals.
           </p>
-          <div class="cta-row">
-            <a
-              class="btn btn-primary"
-              href="https://drive.google.com/file/d/1X7aSeMJ6QzliBdFvJoUOOsacekdWpYVL/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Resume
-            </a>
-          </div>
         </div>
         <img
           class="avatar"
           src="images/profile.jpg"
           alt="Portrait of K. Pedullantes"
         />
-      </section>
-      
-      <section class="statement">
-        I am driven to solve complex problems and deliver high-quality products
-        that exceed client expectations. My experience spans the full project
-        lifecycle, from initial concept through deployment and ongoing
-        optimization, ensuring every decision aligns with business objectives
-        and user needs.
-      </section>
-
-      <section class="grid">
-        <article class="card">
-          <h3>Laravel</h3>
-          <p>
-            Crafting robust backend solutions with clean, maintainable code and
-            optimized performance.
-          </p>
-        </article>
-        <article class="card">
-          <h3>ReactJS & React Native</h3>
-          <p>
-            Developing dynamic, responsive web and mobile experiences with a
-            strong UX and interaction focus.
-          </p>
-        </article>
-        <article class="card">
-          <h3>VueJS</h3>
-          <p>
-            Building progressive interfaces with a keen eye for detail and
-            user-centric design.
-          </p>
-        </article>
-        <article class="card">
-          <h3>AWS Services</h3>
-          <p>
-            Architecting scalable, secure, cost-effective cloud solutions using
-            modern AWS building blocks.
-          </p>
-          <div class="tag-row">
-            <span class="tag">Lambda</span>
-            <span class="tag">API Gateway</span>
-            <span class="tag">Amplify</span>
-            <span class="tag">DynamoDB</span>
-            <span class="tag">SES</span>
-            <span class="tag">S3</span>
-            <span class="tag">Route53</span>
-            <span class="tag">EC2</span>
-          </div>
-        </article>
       </section>
 
       <section class="socials">
@@ -163,6 +122,55 @@
             <div class="detail-value">August 18, 1994</div>
           </div>
         </div>
+      </section>
+      
+      <section class="statement">
+        I am driven to solve complex problems and deliver high-quality products
+        that exceed client expectations. My experience spans the full project
+        lifecycle, from initial concept through deployment and ongoing
+        optimization, ensuring every decision aligns with business objectives
+        and user needs.
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Laravel</h3>
+          <p>
+            Crafting robust backend solutions with clean, maintainable code and
+            optimized performance.
+          </p>
+        </article>
+        <article class="card">
+          <h3>ReactJS & React Native</h3>
+          <p>
+            Developing dynamic, responsive web and mobile experiences with a
+            strong UX and interaction focus.
+          </p>
+        </article>
+        <article class="card">
+          <h3>VueJS</h3>
+          <p>
+            Building progressive interfaces with a keen eye for detail and
+            user-centric design.
+          </p>
+        </article>
+        <article class="card">
+          <h3>AWS Services</h3>
+          <p>
+            Architecting scalable, secure, cost-effective cloud solutions using
+            modern AWS building blocks.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Lambda</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">Amplify</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">SES</span>
+            <span class="tag">S3</span>
+            <span class="tag">Route53</span>
+            <span class="tag">EC2</span>
+          </div>
+        </article>
       </section>
 
       <section class="skills-panel">
@@ -298,7 +306,121 @@
           </article>
         </div>
       </section>
+
+      <section id="contact" class="contact">
+        <div class="contact-header">
+          <h2>Contact</h2>
+          <p>Let’s connect to build something meaningful.</p>
+        </div>
+        <div class="contact-actions">
+          <a
+            class="btn btn-primary"
+            href="https://drive.google.com/file/d/1X7aSeMJ6QzliBdFvJoUOOsacekdWpYVL/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Resume
+          </a>
+          <button class="btn btn-secondary" type="button" data-modal-open>
+            Send Email
+          </button>
+        </div>
+      </section>
+
+      <div class="modal" id="email-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="email-modal-title">
+          <div class="modal-header">
+            <h3 id="email-modal-title">Send Email</h3>
+            <button class="modal-close" type="button" aria-label="Close" data-modal-close>
+              ×
+            </button>
+          </div>
+          <form class="modal-form" data-email-form>
+            <label class="modal-field">
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="Project inquiry" required />
+            </label>
+            <label class="modal-field">
+              <span>Content</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Share a quick summary of what you need."
+                required
+              ></textarea>
+            </label>
+            <div class="modal-actions">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <footer>© 2026 Kirk Patrick Edullantes. Built with intent.</footer>
     </main>
+    <script>
+      const modal = document.getElementById("email-modal");
+      const openButton = document.querySelector("[data-modal-open]");
+      const closeButtons = modal.querySelectorAll("[data-modal-close]");
+      const form = modal.querySelector("[data-email-form]");
+
+      const openModal = () => {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        const subjectInput = modal.querySelector("input[name='subject']");
+        if (subjectInput) {
+          subjectInput.focus();
+        }
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+      };
+
+      if (openButton) {
+        openButton.addEventListener("click", openModal);
+      }
+
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", closeModal);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) {
+          closeModal();
+        }
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const subject = form.elements.subject.value.trim();
+        const message = form.elements.message.value.trim();
+        const mailto = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+          message
+        )}`;
+        window.location.href = mailto;
+        form.reset();
+        closeModal();
+      });
+
+      const revealItems = document.querySelectorAll(
+        "main.page > section, main.page > footer, .card, .skill-item, .system-card, .detail-item"
+      );
+      revealItems.forEach((item) => item.classList.add("reveal"));
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle("is-visible", entry.isIntersecting);
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
   </body>
 </html>
