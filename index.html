@@ -218,7 +218,8 @@
               ></iframe>
               <div class="system-fallback" aria-label="Gatheroo fallback">
                 <div class="system-mark">G</div>
-                <p>If the embed is blocked, use the link below.</p>
+                <p>Preview may be blocked. Open the link or tap to reveal.</p>
+                <button class="preview-toggle" type="button">Show Preview</button>
               </div>
             </div>
             <a
@@ -243,7 +244,8 @@
               ></iframe>
               <div class="system-fallback" aria-label="Margo fallback">
                 <div class="system-mark">M</div>
-                <p>If the embed is blocked, use the link below.</p>
+                <p>Preview may be blocked. Open the link or tap to reveal.</p>
+                <button class="preview-toggle" type="button">Show Preview</button>
               </div>
             </div>
             <a
@@ -268,7 +270,8 @@
               ></iframe>
               <div class="system-fallback" aria-label="FlashMoney fallback">
                 <div class="system-mark">F</div>
-                <p>If the embed is blocked, use the link below.</p>
+                <p>Preview may be blocked. Open the link or tap to reveal.</p>
+                <button class="preview-toggle" type="button">Show Preview</button>
               </div>
             </div>
             <a
@@ -285,13 +288,13 @@
       <footer>© 2026 Kirk Patrick Edullantes. Built with intent.</footer>
     </main>
     <script>
-      document.querySelectorAll(".system-preview iframe").forEach((frame) => {
-        frame.addEventListener("load", () => {
-          const preview = frame.closest(".system-preview");
-          if (preview) {
-            preview.classList.add("is-loaded");
-          }
-        });
+      document.querySelectorAll(".system-preview").forEach((preview) => {
+        const toggle = preview.querySelector(".preview-toggle");
+        if (toggle) {
+          toggle.addEventListener("click", () => {
+            preview.classList.add("is-revealed");
+          });
+        }
       });
     </script>
   </body>

@@ -390,8 +390,10 @@ h1 {
 }
 
 .system-fallback {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  min-height: 120px;
+  height: 320px;
   border: 1px dashed rgba(244, 242, 237, 0.18);
   border-radius: 16px;
   background: linear-gradient(160deg, rgba(121, 216, 255, 0.1), rgba(243, 192, 107, 0.08));
@@ -423,16 +425,22 @@ h1 {
   font-size: 0.9rem;
 }
 
-.system-preview.is-loaded .system-fallback {
+.system-preview.is-revealed .system-fallback {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
-  height: 0;
-  min-height: 0;
-  padding: 0;
-  border: 0;
-  margin: 0;
   pointer-events: none;
+}
+
+.preview-toggle {
+  margin-top: 4px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 242, 237, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .system-link {
