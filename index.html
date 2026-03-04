@@ -88,6 +88,36 @@
         </article>
       </section>
 
+      <section class="socials">
+        <h2>Social Media</h2>
+        <div class="social-links">
+          <a
+            class="social-link"
+            href="https://www.facebook.com/heyyakirk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Facebook <span>@heyyakirk</span>
+          </a>
+          <a
+            class="social-link"
+            href="https://www.instagram.com/heyyakirk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram <span>@heyyakirk</span>
+          </a>
+          <a
+            class="social-link"
+            href="https://www.linkedin.com/in/kirkedullantes"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn <span>/kirkedullantes</span>
+          </a>
+        </div>
+      </section>
+
       <section class="profile-details">
         <h2>Profile Details</h2>
         <div class="details-grid">
@@ -178,8 +208,18 @@
           <article class="system-card">
             <h3>Gatheroo</h3>
             <p>Authentication entry point for the Gatheroo platform.</p>
-            <div class="system-fallback" aria-label="Gatheroo preview">
-              <div class="system-mark">G</div>
+            <div class="system-preview">
+              <iframe
+                class="system-frame"
+                src="https://app.gatheroo.io/auth/subdomain-lookup"
+                title="Gatheroo"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              ></iframe>
+              <div class="system-fallback" aria-label="Gatheroo fallback">
+                <div class="system-mark">G</div>
+                <p>If the embed is blocked, use the link below.</p>
+              </div>
             </div>
             <a
               class="system-link"
@@ -193,8 +233,18 @@
           <article class="system-card">
             <h3>Margo - Dental Web App</h3>
             <p>Secure login for the Margo dental web platform.</p>
-            <div class="system-fallback" aria-label="Margo preview">
-              <div class="system-mark">M</div>
+            <div class="system-preview">
+              <iframe
+                class="system-frame"
+                src="https://margo.linneasystems.com/auth/login"
+                title="Margo - Dental Web App"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              ></iframe>
+              <div class="system-fallback" aria-label="Margo fallback">
+                <div class="system-mark">M</div>
+                <p>If the embed is blocked, use the link below.</p>
+              </div>
             </div>
             <a
               class="system-link"
@@ -205,9 +255,44 @@
               Open in new tab
             </a>
           </article>
+          <article class="system-card">
+            <h3>FlashMoney</h3>
+            <p>New application flow for the FlashMoney platform.</p>
+            <div class="system-preview">
+              <iframe
+                class="system-frame"
+                src="https://app.flashmoney.com.au/new-application/M6VJHZDRWMTC0QQ2"
+                title="FlashMoney"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              ></iframe>
+              <div class="system-fallback" aria-label="FlashMoney fallback">
+                <div class="system-mark">F</div>
+                <p>If the embed is blocked, use the link below.</p>
+              </div>
+            </div>
+            <a
+              class="system-link"
+              href="https://app.flashmoney.com.au/new-application/M6VJHZDRWMTC0QQ2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open in new tab
+            </a>
+          </article>
         </div>
       </section>
       <footer>© 2026 Kirk Patrick Edullantes. Built with intent.</footer>
     </main>
+    <script>
+      document.querySelectorAll(".system-preview iframe").forEach((frame) => {
+        frame.addEventListener("load", () => {
+          const preview = frame.closest(".system-preview");
+          if (preview) {
+            preview.classList.add("is-loaded");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
