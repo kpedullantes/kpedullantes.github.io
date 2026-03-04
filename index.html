@@ -67,6 +67,13 @@
         color: var(--ink-muted);
       }
 
+      .name {
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+      }
+
       h1 {
         font-family: "Fraunces", "Times New Roman", serif;
         font-size: clamp(2.3rem, 3.4vw, 3.8rem);
@@ -180,6 +187,47 @@
         border-radius: 18px;
         background: linear-gradient(140deg, rgba(121, 216, 255, 0.08), rgba(243, 192, 107, 0.08));
         border: 1px solid var(--border);
+      }
+
+      .profile-details {
+        display: grid;
+        gap: 16px;
+        padding: 24px;
+        border-radius: 22px;
+        border: 1px solid var(--border);
+        background: rgba(8, 9, 12, 0.55);
+        box-shadow: var(--shadow);
+        animation: fadeUp 700ms ease-out both;
+      }
+
+      .profile-details h2 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .detail-item {
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(244, 242, 237, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .detail-label {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.7rem;
+        color: var(--ink-muted);
+      }
+
+      .detail-value {
+        margin-top: 6px;
+        font-size: 1rem;
       }
 
       .systems {
@@ -352,6 +400,7 @@
     <main class="page">
       <section class="hero">
         <div class="hero-content">
+          <div class="name">Kirk Patrick A. Edullantes</div>
           <span class="eyebrow">GitHub.io Profile</span>
           <h1>
             Full-Stack Engineer building
@@ -478,6 +527,29 @@
               </span>
             </div>
             <div class="skill-meta">Experience: 2 - 5 years</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-details">
+        <h2>Profile Details</h2>
+        <div class="details-grid">
+          <div class="detail-item">
+            <div class="detail-label">Phone</div>
+            <div class="detail-value">+63 967 354 2054</div>
+            <div class="detail-value">+63 916 463 4654</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Address</div>
+            <div class="detail-value">Tagum, Davao Del Norte</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Nationality</div>
+            <div class="detail-value">Filipino</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">Birthday</div>
+            <div class="detail-value">August 18, 1994</div>
           </div>
         </div>
       </section>
